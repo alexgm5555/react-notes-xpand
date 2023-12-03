@@ -1,0 +1,25 @@
+.NoteList-container{
+  
+  height: 100vh;
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .body-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .panel-left {
+      width: 100%;
+      min-height: 90vh;
+    }
+    .panel-right {
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+      position: relative;
+    }
+
+  }
+}
