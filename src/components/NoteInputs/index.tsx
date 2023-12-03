@@ -21,12 +21,15 @@ export const NoteInputs:FC = () => {
   const handleClickButton = async () => {
     try {
       setErrors(true);
-      if (form.description === '' || form.title === '') throw "Campos invalidos";
-      if (data.operation === 'edit') sendUpdate();
-      if (data.operation === 'create') sendCreate();
+      if (form.description === '' || form.title === '') {
+        console.error("Campos Invalidos");
+      } else {
+        if (data.operation === 'edit') sendUpdate();
+        if (data.operation === 'create') sendCreate();
+      }
     } catch (error: any) {
       console.log(error);
-      if(error?.message?.errors[0].message) alert(error?.message?.errors[0].message)
+      if(error?.message?.errors[0]?.message) alert(error?.message?.errors[0].message)
     }
   };
 
