@@ -10,6 +10,7 @@ export const apiRest = async (data: apiRestInterface) => {
       method,
       headers: {
         "Content-type": "application/json",
+        "ngrok-skip-browser-warning": "69420"
       },
       body: JSON.stringify(body)}
   )
